@@ -19,6 +19,13 @@
         </plugin>
     </plugins>
 </reporting>
+  <distributionManagement>
+       <repository>
+         <id>internal.repo</id>
+         <name>Internal repo</name>
+         <url>file:///var/lib/jenkins/artifacts1</url>
+       </repository>
+   </distributionManagement>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
