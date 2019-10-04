@@ -16,6 +16,14 @@ pipeline {
 
             }
         }
+        stage('Package'){
+            steps {
+                withMaven(maven : 'MAVEN362'){
+                        sh "mvn package"
+                }
+
+            }
+        }
         stage('Deploy') {
             steps {
                withMaven(maven : 'MAVEN362'){
